@@ -22,5 +22,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-route::get('candidatas/votar/{id}', ['as'=>'Candidata.votar', 'uses'=>'CandidataController@votar']);
-route::get('home',['as'=>'home', 'uses'=>'CandidataController@home']);
+Route::get('candidatas/votar/{id}', ['as'=>'Candidata.votar', 'uses'=>'CandidataController@votar']);
+Route::get('home',['as'=>'home', 'uses'=>'CandidataController@home']);

@@ -16,7 +16,7 @@ class CreateVotosTable extends Migration
         Schema::create('votos', function (Blueprint $table) {
             $table->increments('idVoter');
             $table->string('nomeVoter', 100);
-            $table->string('emailVoter', 100)->unique();
+            $table->string('emailVoter', 100);
             $table->integer('candidata_id')->unsigned();
             $table->timestamps();
         });

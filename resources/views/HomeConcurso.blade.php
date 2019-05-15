@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col-sm-10">
-     <h3>Candidatas</h3>
+     <h3 style="margin-top: 5%;">Candidatas</h3>
   </div>   
   </div>   
 
@@ -13,7 +13,7 @@
 </div>
 @endif
  <input class="form-control" id="myInput" type="text" placeholder="Search..">
-<div class="container">
+<div class="container" style="margin-top: 5%;">
 <div class="row" id="myCard">
  
   @foreach ($linhas as $linha)

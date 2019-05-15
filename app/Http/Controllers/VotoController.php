@@ -38,6 +38,11 @@ class VotoController extends Controller
      */
     public function store(Request $request)
     {
+        $validaDados = $request->validate([
+            'nomeVoter' => 'required|min:10',
+            'emailVoter' => 'required|unique:votos,emailVoter'
+        ]);
+        
         $dados = $request->all();
 
         $reg = Voto::create($dados);

@@ -148,6 +148,8 @@ class CandidataController extends Controller
         // exclui a foto 
         Storage::disk('public')->delete($foto);  
 
+        
+
         if ($reg->delete()) {
             return redirect()->route('candidatas.index')
                    ->with('status', 'Ok! Candidata Excluída com Sucesso');

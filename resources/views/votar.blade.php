@@ -1,6 +1,16 @@
 @extends('modelo')
 @section('conteudo')
 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <form method="post" action="{{ route('votos.store') }}" enctype="multipart/form-data">
 
 {{ csrf_field() }}
